@@ -26,8 +26,16 @@ module.exports = {
       {
         text: '前端', link: '/pages/2253d1/', items: [
           {
+            text: '前端基础', items: [
+              { text: 'HTML&CSS', link: '/pages/f58e7d/' },
+              { text: 'js', link: '/pages/78fe46/' },
+            ]
+          },
+          {
             text: '前端框架', items: [
-              { text: 'React', link: '/pages/2253d1/' },
+              { text: 'vue2', link: '/pages/ea7a2b/' },
+              { text: 'vue3', link: '/pages/d84568/' },
+              { text: 'react', link: '/pages/658eb2/' },
             ]
           }
         ]
@@ -42,6 +50,13 @@ module.exports = {
           ]
         },{
           text:'后端框架',items:[
+
+          ]
+        },{
+          text:'Java',items:[
+            {
+              text:'设计模式',link:'/pages/697071/'
+            }
           ]
         }
         ]
