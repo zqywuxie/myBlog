@@ -46,6 +46,9 @@ module.exports = {
             text: 'Golang',items:[
             {
               text:'基础语法',link:'/pages/7a69d5/'
+            },
+            {
+              text:'高阶用法',link:'/pages/82fbce/'
             }
           ]
         },{
@@ -132,7 +135,7 @@ module.exports = {
     },
     footer: { // 页脚信息
       createYear: 2023, // 博客创建年份
-      copyrightInfo: 'siwuxie | zqy', // 博客版权信息，支持a标签
+      copyrightInfo: 'siwuxie | 蜀ICP备2022021825号-1', // 博客版权信息，支持a标签
     },
     htmlModules,
   },
