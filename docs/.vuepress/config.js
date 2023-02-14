@@ -77,6 +77,9 @@ module.exports = {
             {
               text:'Gin框架(下)',link:'/pages/b1dbff/'
             },
+            {
+              text:'模板操作',link:'/pages/47e2da/'
+            }
 
           ]
         }
