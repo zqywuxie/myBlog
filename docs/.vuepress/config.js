@@ -52,17 +52,32 @@ module.exports = {
             },
             {
               text:'网络编程',link:'/pages/0c8601/'
-            }
-          ]
-        },{
-          text:'后端框架',items:[
-
+            },
+            {
+              text:'并发编程',link:'/pages/29098c/'
+            },
+            {
+              text:'数据操作',link:'/pages/9f7910/'
+            },
           ]
         },{
           text:'Java',items:[
             {
               text:'设计模式',link:'/pages/697071/'
             }
+          ]
+        },{
+          text:'后端框架',items:[
+            {
+              text:'Gin框架(上)',link:'/pages/f6afe0/',
+            },
+            {
+              text:'Gin框架(中)',link:'/pages/bb4f5d/'
+            },
+            {
+              text:'Gin框架(下)',link:'/pages/b1dbff/'
+            },
+
           ]
         }
         ]
