@@ -82,6 +82,13 @@ module.exports = {
             }
 
           ]
+        },
+        {
+          text:'中间件',items:[
+            {
+              text:'Redis',link:'/pages/5037f2/'
+            }
+          ]
         }
         ]
       },
