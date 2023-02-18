@@ -64,6 +64,8 @@ module.exports = {
           text:'Java',items:[
             {
               text:'设计模式',link:'/pages/697071/'
+            },{
+              text:'基础知识',link:'/pages/c0d289/'
             }
           ]
         },{
