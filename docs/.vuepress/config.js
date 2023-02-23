@@ -92,6 +92,9 @@ module.exports = {
             },
             {
               text:'Nginx',link:'/pages/28823c/'
+            },
+            {
+              text:'RabbitMQ',link:'/pages/337fc2/'
             }
           ]
         }
