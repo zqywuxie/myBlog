@@ -7,7 +7,7 @@ module.exports = {
   theme: 'vdoing', // 使用依赖包主题
   // theme: require.resolve('../../vdoing'), // 使用本地主题 (先将vdoing主题文件下载到本地：https://github.com/xugaoyi/vuepress-theme-vdoing)
 
-  title: "思无邪的知识库",
+  title: "思无邪-个人编程学习",
   description: '个人博客',
   // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
@@ -171,7 +171,7 @@ module.exports = {
     },
     footer: { // 页脚信息
       createYear: 2023, // 博客创建年份
-      copyrightInfo: 'siwuxie | 蜀ICP备2022021825号-1', // 博客版权信息，支持a标签
+      copyrightInfo: 'siwuxie | <a href="https://beian.miit.gov.cn/">蜀ICP备2022021825号-1</a>', // 博客版权信息，支持a标签
     },
     htmlModules,
   },
