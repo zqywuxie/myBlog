@@ -4,7 +4,7 @@ on:
   push:
     branches:
       # master分支，你也可以改成其他分支
-      - master
+      - main
 jobs:
   build:
     # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)1
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@master
       # 安装Node13
       - name: use Node.js 13.2.0
-        # 使用action库  actions/setup-node安装node
+        # 使用action库  actions/setup-node安装node1
         uses: actions/setup-node@v1
         with:
           node-version: 13.2.0
