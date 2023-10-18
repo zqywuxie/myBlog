@@ -31,14 +31,14 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.1
         env:
           # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           # scp参数
           ARGS: "-avzr --delete"
           # 源目录，编译后生成的文件目录
-          SOURCE: "./dist"
+          SOURCE: "./docs/.vuepress/dist"
           # 服务器ip：换成你的服务器IP
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           # 用户
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           # 目标地址 你在服务器上部署代码的地方
-          TARGET: "/root/web/vue-drag-demo"
+          TARGET: "/www/wwwroot/blog"
