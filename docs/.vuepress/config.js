@@ -170,8 +170,8 @@ module.exports = {
       ]
     },
     footer: { // 页脚信息
-      createYear: 2023, // 博客创建年份
-      copyrightInfo: 'siwuxie | <a href="https://beian.miit.gov.cn/">蜀ICP备2022021825号-1</a>', // 博客版权信息，支持a标签
+      createYear: 2022, // 博客创建年份
+      copyrightInfo: 'siwuxie | <a href="https://beian.miit.gov.cn/"><img src="https://img.qimuu.icu/typory/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png"/>蜀ICP备2022021825号-2</a>', // 博客版权信息，支持a标签
     },
     htmlModules,
   },
