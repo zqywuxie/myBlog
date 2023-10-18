@@ -10,24 +10,14 @@ jobs:
     # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)1
     runs-on: ubuntu-latest
     steps:
-      # 获取源码
       - name: Checkout
-        # 使用action库  actions/checkout获取源码
-        uses: actions/checkout@main
-      # # 安装Node13
-      # - name: use Node.js 13.2.0
-      #   # 使用action库  actions/setup-node安装node1
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: 13.2.0
-      # 安装依赖
-      # - name: npm install
-      #   run: npm install
-      # # 打包
-      # - name: npm build
-      #   run: npm run build
-      # - run: npm ci
-      - run: npm run build
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      # 生成静态文件
+      - name: Build
+        run: yarn install && yarn docs:build
       # 部署到阿里云
       - name: Deploy to Aliyun
         uses: easingthemes/ssh-deploy@v2.1.1
