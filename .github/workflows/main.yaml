@@ -14,18 +14,20 @@ jobs:
       - name: Checkout
         # 使用action库  actions/checkout获取源码
         uses: actions/checkout@main
-      # 安装Node13
-      - name: use Node.js 13.2.0
-        # 使用action库  actions/setup-node安装node1
-        uses: actions/setup-node@v1
-        with:
-          node-version: 13.2.0
+      # # 安装Node13
+      # - name: use Node.js 13.2.0
+      #   # 使用action库  actions/setup-node安装node1
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 13.2.0
       # 安装依赖
-      - name: npm install
-        run: npm install
-      # 打包
-      - name: npm build
-        run: npm run build
+      # - name: npm install
+      #   run: npm install
+      # # 打包
+      # - name: npm build
+      #   run: npm run build
+      - run: npm ci
+      - run: npm run build
       # 部署到阿里云
       - name: Deploy to Aliyun
         uses: easingthemes/ssh-deploy@v2.1.1
