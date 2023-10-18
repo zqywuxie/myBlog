@@ -18,9 +18,9 @@ jobs:                             # 需要执行的任务，可以有多个任�
     - name: Deploy to aliyun server        # 为 step 指定一个名称，将会在 github action 的控制台中显示
       uses: easingthemes/ssh-deploy@v2.1.5      #可以访问的仓库，实现的上传服务器步骤被封装在此action
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}  #这个是阿里云的私钥
+        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}  #这个是阿里云的私钥1
         ARGS: "-avzr --delete"
-        SOURCE: "./docs/.vuepress/dist"
+        SOURCE: "docs/.vuepress/dist"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}    #阿里云的 ip
         REMOTE_USER: ${{ secrets.REMOTE_USER }}    #阿里云用户
         TARGET: "/www/wwwroot/blog"       #被部署的服务器路径 
