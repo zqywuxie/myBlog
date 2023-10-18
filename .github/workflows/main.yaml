@@ -17,7 +17,7 @@ jobs:
 
       # 生成静态文件
       - name: Build
-        run: yarn install && yarn docs:build
+        run: npm install && npm build
       # 部署到阿里云
       - name: Deploy to Aliyun
         uses: easingthemes/ssh-deploy@v2.1.1
