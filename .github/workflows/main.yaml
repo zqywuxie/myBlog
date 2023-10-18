@@ -1,39 +1,39 @@
-name: Build app and deploy to aliyun
+# main.yml
+name: deploy to aliyun
 on:
-  #监听push操作
   push:
     branches:
-      # master分支，你也可以改成其他分支
       - main
 jobs:
   build:
-    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master # 切换分支到master
+      # 切换分支
+      - name: Checkout
+        uses: actions/checkout@main
+      # 下载 git submodule
+      - uses: srt32/git-actions@v0.0.3
         with:
-          fetch-depth: 2
-
-      - name: Use Node.js 12.x #使用nodejs 12.x版本
+          args: git submodule update --init --recursive
+      # 使用 node:10
+      - name: use Node.js 10
         uses: actions/setup-node@v1
         with:
-          node-version: "12.x"
-
-      - name: install and build #安装以来并打包，执行的是项目我们定义的命令
-        run: npm install && npm run build
-      # 部署到阿里云
-      - name: Deploy to Aliyun
-        uses: easingthemes/ssh-deploy@v2.1.1
+          node-version: 10
+      # npm install
+      - name: npm install and build
+        run: |
+          npm install
+          npm run build
         env:
-          # 私钥
+          CI: true
+      # Deploy
+      - name: Deploy
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          # scp参数``
           ARGS: "-avz --delete"
-          # 源目录，编译后生成的文件目录
-          SOURCE: "./docs/.vuepress/dist"
-          # 服务器ip：换成你的服务器IP
+          SOURCE: "[Current File Dir]"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          # 用户
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          # 目标地址 你在服务器上部署代码的地方
           TARGET: "/www/wwwroot/blog"
